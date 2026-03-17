@@ -1,0 +1,21 @@
+{
+  "name": "ved-animal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "pdfkit": "^0.18.0",
+    "sqlite3": "^6.0.1"
+  }
+}

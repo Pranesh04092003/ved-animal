@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veterinary Care for Animal Medical Solution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Full Stack Veterinary System</p>
+        <h1>Veterinary Care for Animal Medical Solution</h1>
+        <p class="subtitle">Animal profiles, visits, diagnosis, treatment, lab, billing, and analytics in one dashboard.</p>
+        <p id="ownerSessionText" class="session-line"></p>
+      </div>
+      <div class="hero-actions">
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>Dashboard</h2>
+      <div id="summaryCards" class="card-grid"></div>
+    </section>
+
+    <section class="panel-grid">
+      <article class="panel">
+        <h2>Module Manager</h2>
+        <div class="row">
+          <label for="moduleSelect">Select Module</label>
+          <select id="moduleSelect"></select>
+        </div>
+        <form id="recordForm" class="form-grid"></form>
+        <div class="actions">
+          <button id="createBtn" type="button">Create</button>
+          <button id="updateBtn" type="button">Update</button>
+          <button id="clearBtn" type="button" class="ghost">Clear</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Records</h2>
+        <div class="table-wrap">
+          <table id="recordsTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel-grid">
+      <article class="panel">
+        <h2>Appointment Calendar</h2>
+        <div class="row">
+          <label for="monthPicker">Month</label>
+          <input id="monthPicker" type="month" />
+          <button id="loadCalendarBtn" type="button">Load</button>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Invoice Generation</h2>
+        <div class="row">
+          <select id="invoiceAnimalSelect"></select>
+          <button id="generateInvoiceBtn" type="button">Generate PDF</button>
+        </div>
+        <pre id="invoiceView" class="pre-block"></pre>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Reporting & Analytics</h2>
+      <div class="actions">
+        <button data-report="patient-statistics" class="reportBtn" type="button">Patient Statistics</button>
+        <button data-report="disease-trends" class="reportBtn" type="button">Disease Trends</button>
+        <button data-report="vaccination-coverage" class="reportBtn" type="button">Vaccination Coverage</button>
+        <button data-report="revenue" class="reportBtn" type="button">Revenue</button>
+        <button data-report="staff-activity" class="reportBtn" type="button">Staff Activity</button>
+      </div>
+      <div id="reportView" class="report-view"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
